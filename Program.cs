@@ -63,6 +63,7 @@ class Program
         Console.Write("Ingresa un numero: ");
         int numero = int.Parse(Console.ReadLine());
 
+        // Reviso si el numero es mayor a cero antes de elevarlo al cuadrado
         if (numero > 0)
         {
             int resultado = numero * numero;
