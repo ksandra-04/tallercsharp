@@ -250,12 +250,14 @@ class Program
     }
 
     // 10. String Length
-    // Muestra cuantas letras tiene una palabra.
+
+    
     static void StringLength()
     {
         Console.Write("Ingresa una palabra: ");
         string palabra = Console.ReadLine();
 
+        //.Length me dice cuantos caracteres tiene la palabra
         Console.WriteLine("Resultado: " + palabra.Length);
     }
 
@@ -272,6 +274,7 @@ class Program
         Console.Write("Ingresa el numero 4: ");
         double n4 = double.Parse(Console.ReadLine());
 
+        // El promedio es la suma de los 4 numeros dividida entre 4
         double promedio = (n1 + n2 + n3 + n4) / 4;
         Console.WriteLine("Resultado: " + promedio);
     }
@@ -291,6 +294,7 @@ class Program
         Console.Write("Ingresa el numero 5: ");
         double n5 = double.Parse(Console.ReadLine());
 
+        // Empiezo asumiendo que el primer numero es el menor, y lo voy comparando con los demas
         double menor = n1;
         if (n2 < menor) menor = n2;
         if (n3 < menor) menor = n3;
@@ -309,6 +313,8 @@ class Program
 
         int contador = 0;
 
+
+        // Recorro cada letra de la palabra y reviso si es una vocal
         for (int i = 0; i < palabra.Length; i++)
         {
             char letra = palabra[i];
@@ -330,6 +336,7 @@ class Program
 
         long factorial = 1;
 
+        // Voy multiplicando el resultado por cada numero desde 1 hasta el numero ingresado
         for (int i = 1; i <= numero; i++)
         {
             factorial = factorial * i;
@@ -339,12 +346,14 @@ class Program
     }
 
     // 15. InRange Validator
-    // Verifica si un numero esta entre 10 y 20 (incluyendo ambos).
+   
     static void InRangeValidator()
     {
         Console.Write("Ingresa un numero: ");
         int numero = int.Parse(Console.ReadLine());
 
+
+        //Uso && para exigir que se cumplan las dos condiciones(mayor a 10 y menor a 20)
         if (numero >= 10 && numero <= 20)
         {
             Console.WriteLine("Esta en el rango.");
