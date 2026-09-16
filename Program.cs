@@ -63,6 +63,7 @@ class Program
         Console.Write("Ingresa un numero: ");
         int numero = int.Parse(Console.ReadLine());
 
+        // Reviso si el numero es mayor a cero antes de elevarlo al cuadrado
         if (numero > 0)
         {
             int resultado = numero * numero;
@@ -89,6 +90,7 @@ class Program
         Console.Write("Ingresa el segundo numero: ");
         double numero2 = double.Parse(Console.ReadLine());
 
+        // Comparo cual de los dos numeros es mayor para decidir la operacion
         if (numero1 > numero2)
         {
             Console.WriteLine("Resultado: " + (numero1 * 2));
@@ -106,6 +108,7 @@ class Program
         Console.Write("Ingresa un numero: ");
         double numero = double.Parse(Console.ReadLine());
 
+        // Si el numero es positivo calculo raiz, de lo contrario calculo el cuadrado
         if (numero > 0)
         {
             Console.WriteLine("Resultado: " + Math.Sqrt(numero));
@@ -123,6 +126,7 @@ class Program
         Console.Write("Ingresa el radio: ");
         double radio = double.Parse(Console.ReadLine());
 
+        // Formula del perimetro: 2 multiplicado por pi multiplicado por el radio
         double perimetro = 2 * Math.PI * radio;
         Console.WriteLine("Resultado: " + Math.Round(perimetro, 2));
     }
@@ -134,6 +138,7 @@ class Program
         Console.Write("Ingresa un numero del 1 al 7: ");
         int dia = int.Parse(Console.ReadLine());
 
+        // Solo muestro el dia si esta entre 1 y 5 (dias laborales)
         if (dia == 1) Console.WriteLine("Lunes");
         else if (dia == 2) Console.WriteLine("Martes");
         else if (dia == 3) Console.WriteLine("Miercoles");
@@ -149,6 +154,7 @@ class Program
         Console.Write("Ingresa el salario anual: ");
         double salario = double.Parse(Console.ReadLine());
 
+        // El impuesto solo aplica si el salario supera los 12000
         if (salario > 12000)
         {
             double excedente = salario - 12000;
@@ -171,6 +177,7 @@ class Program
         Console.Write("Ingresa el segundo numero: ");
         int numero2 = int.Parse(Console.ReadLine());
 
+        // El simbolo % me da el residuo (lo que sobra) de la division
         int residuo = numero1 % numero2;
         Console.WriteLine("Resultado: " + residuo);
     }
@@ -181,6 +188,7 @@ class Program
     {
         int suma = 0;
 
+        // Recorro los numeros del 1 al 50 y sumo solo los pares
         for (int i = 1; i <= 50; i++)
         {
             if (i % 2 == 0)
@@ -206,7 +214,7 @@ class Program
         Console.Write("Ingresa el denominador de la segunda fraccion: ");
         int den2 = int.Parse(Console.ReadLine());
 
-        // Para restar fracciones se usa un denominador comun (multiplicando los dos)
+        // Para restar fracciones primero igualo los denominadores multiplicando cruzado
         int nuevoNumerador = (num1 * den2) - (num2 * den1);
         int nuevoDenominador = den1 * den2;
 
@@ -242,12 +250,14 @@ class Program
     }
 
     // 10. String Length
-    // Muestra cuantas letras tiene una palabra.
+
+    
     static void StringLength()
     {
         Console.Write("Ingresa una palabra: ");
         string palabra = Console.ReadLine();
 
+        //.Length me dice cuantos caracteres tiene la palabra
         Console.WriteLine("Resultado: " + palabra.Length);
     }
 
@@ -264,6 +274,7 @@ class Program
         Console.Write("Ingresa el numero 4: ");
         double n4 = double.Parse(Console.ReadLine());
 
+        // El promedio es la suma de los 4 numeros dividida entre 4
         double promedio = (n1 + n2 + n3 + n4) / 4;
         Console.WriteLine("Resultado: " + promedio);
     }
@@ -283,6 +294,7 @@ class Program
         Console.Write("Ingresa el numero 5: ");
         double n5 = double.Parse(Console.ReadLine());
 
+        // Empiezo asumiendo que el primer numero es el menor, y lo voy comparando con los demas
         double menor = n1;
         if (n2 < menor) menor = n2;
         if (n3 < menor) menor = n3;
@@ -301,6 +313,8 @@ class Program
 
         int contador = 0;
 
+
+        // Recorro cada letra de la palabra y reviso si es una vocal
         for (int i = 0; i < palabra.Length; i++)
         {
             char letra = palabra[i];
@@ -322,6 +336,7 @@ class Program
 
         long factorial = 1;
 
+        // Voy multiplicando el resultado por cada numero desde 1 hasta el numero ingresado
         for (int i = 1; i <= numero; i++)
         {
             factorial = factorial * i;
@@ -331,12 +346,14 @@ class Program
     }
 
     // 15. InRange Validator
-    // Verifica si un numero esta entre 10 y 20 (incluyendo ambos).
+   
     static void InRangeValidator()
     {
         Console.Write("Ingresa un numero: ");
         int numero = int.Parse(Console.ReadLine());
 
+
+        //Uso && para exigir que se cumplan las dos condiciones(mayor a 10 y menor a 20)
         if (numero >= 10 && numero <= 20)
         {
             Console.WriteLine("Esta en el rango.");
